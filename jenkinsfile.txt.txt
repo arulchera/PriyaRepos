@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages {
+        stage('Commit') {
+            steps {
+                echo"source code downloaded from GITHUB"
+                  }
+		}
+	stage('Build') {
+            steps {
+                echo"Build jobs runs with Maven tool"
+            }
+	}
+	stage('Test') {
+            steps {
+                echo"Test jobs runs with selenium"
+            }
+	}
+	stage('Deploy') {
+            steps {
+                echo"Delpoyment runs with Docker"
+            }
+	}
+	stage('Monitor') {
+            steps {
+                echo"Monitoring runs with spunk"
+            }
+	}
+
+        }
+    }
